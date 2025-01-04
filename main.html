@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Master</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">QuizMaster</a>
+  </nav>
+
+  <div class="quiz-container">
+    <div class="theme-toggle" onclick="toggleTheme()" style="text-align: end; font-size: 2rem;">🌞</div>
+    <h1>Welcome to QuizMaster</h1>
+
+    <div id="category-info" class="category-info" style="display: none;">
+        <!-- Content Display Section -->
+        <div id="categoryContent"></div>
+        <p id="level"></p>
+        <p id="questions-count"></p>
+    </div>
+
+    <div class="category-selection row">
+      <div class="col-12 col-md-6 mb-3">
+        <button onclick="selectCategory('htmlQuizData')" class="w-100">HTML</button>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <button onclick="selectCategory('cssQuizData')" class="w-100">CSS</button>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <button onclick=" selectCategory('jsQuizData')" class="w-100">JavaScript</button>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+      <button onclick="selectCategory('pythonQuizData')" class="w-100">Python</button>
+    </div>
+      <div class="col-12 col-md-6 mb-3">
+          <button onclick="selectCategory('javaQuizData')" class="w-100">Java</button>
+      </div>
+  </div>
+
+  <div class="difficulty-selection row" id="difficulty-selection" style="display: none;">
+    <div class="col-12 mb-3">
+      <button onclick="startQuiz('easy')" class="w-100">Easy</button>
+    </div>
+    <div class="col-12 mb-3">
+      <button onclick="startQuiz('medium')" class="w-100">Medium</button>
+    </div>
+    <div class="col-12 mb-3">
+      <button onclick="startQuiz('hard')" class="w-100">Hard</button>
+    </div>
+  </div>
+
+  <div id="quiz">
+    <div class="timer" id="timer"></div>
+    <div class="progress-bar">
+      <div class="progress-bar-filled" id="progress-bar"></div>
+    </div>
+    <div id="question" class="question"></div>
+    <div class="options" id="options"></div>
+
+    <div class="d-flex justify-content-between" style="display:none;" id="buttons-container">
+      <button id="clear-btn" onclick="clearAnswer()" class="w-48">Clear Answer</button>
+      <button id="confirm-btn" onclick="confirmAnswer()" class="w-48">Confirm Answer</button>
+    </div>
+
+      <div class="d-flex justify-content-between align-items-end" style="display:none;" id="next-submit-container">
+          <button id="submit-btn" onclick="submitQuiz()" class="w-48">Submit</button>
+          <button id="next-btn" onclick="nextQuestion()" class="w-48">Next Question</button>
+      </div>
+  </div>
+
+  <div id="score" class="score">
+    <p>You scored <span id="final-score"></span> out of <span id="total-questions"></span></p>
+    <div class="restart-exit">
+      <button onclick="restartQuiz()" id="restart-btn" class="w-25">Restart</button>
+      <button onclick="exitQuiz()" class="exit-button w-25">Exit</button>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 QuizMaster | Designed by QuizMaster</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="data.js"></script>
+</body>
+</html>
