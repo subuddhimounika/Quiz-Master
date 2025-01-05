@@ -273,51 +273,7 @@
     color: #ff5722;
   }
 
-  /* Media Queries for Responsiveness */
-  @media (max-width: 992px) {
-    .quiz-container {
-      padding: 30px;
-    }
-
-    h1 {
-      font-size: 30px;
-    }
-
-    .question {
-      font-size: 22px;
-    }
-
-    .options {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-
-    .options button {
-      font-size: 16px;
-    }
-
-    #next-btn,
-    #clear-btn,
-    #confirm-btn,
-    #submit-btn,
-    #restart-btn,
-    .exit-button {
-      font-size: 16px;
-      padding: 10px 25px;
-    }
-
-    .restart-exit {
-      gap: 20px;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .restart-exit button {
-      width: 100%;
-    }
-  }
+  
 
   /* Dark Theme Styles */
 body.dark-theme {
@@ -379,29 +335,78 @@ footer.dark-theme a {
 color: #76ff03;
 } 
 
-@media(max-width: 576px){
-  #category-info{
-    display: grid !important;
-    grid-template-columns: 1fr;
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .quiz-container {
+    padding: 30px;
   }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .question {
+    font-size: 22px;
+  }
+
+  .options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
+  .options button {
+    font-size: 16px;
+  }
+
+  #next-btn,
+  #clear-btn,
+  #confirm-btn,
+  #submit-btn,
+  #restart-btn,
+  .exit-button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  /* .restart-exit {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restart-exit button {
+    width: 100%;
+  } */
+}
 
 @media (max-width: 600px) {
   #category-info{
-      display: grid;
-      grid-template-columns: 1fr;
+      display: grid !important;
+      grid-template-columns: 1fr !important;
   }
 
-/* Center the buttons below 600px */
- #restart-btn, #exit-btn {
-  width: 100%;
-  font-size: 15px;
-  padding: 12px;
+/* Adjust button sizes */
+#restart-btn, #exit-btn {
+  width: 100% ;
+  font-size: 16px; 
+  padding: 12px 50px !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 
-/* Add some margin for spacing between buttons */
-#restart-btn, #exit-btn {
-  margin-top: 15px;
+/* Ensure there's spacing between buttons */
+.restart-exit {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Reduce the gap between the buttons */
+}
+
+/* Make sure buttons are centered and aligned vertically */
+.restart-exit button {
+  width: 100%;
 }
 }

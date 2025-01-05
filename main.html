@@ -61,12 +61,12 @@
     <div id="question" class="question"></div>
     <div class="options" id="options"></div>
 
-    <div class="d-flex justify-content-between" style="display:none;" id="buttons-container">
+    <div class="d-flex justify-content-between gap-1" style="display:none;" id="buttons-container">
       <button id="clear-btn" onclick="clearAnswer()" class="w-48">Clear Answer</button>
       <button id="confirm-btn" onclick="confirmAnswer()" class="w-48">Confirm Answer</button>
     </div>
 
-      <div class="d-flex justify-content-between align-items-end" style="display:none;" id="next-submit-container">
+      <div class="d-flex justify-content-between align-items-end gap-1" style="display:none;" id="next-submit-container">
           <button id="submit-btn" onclick="submitQuiz()" class="w-48">Submit</button>
           <button id="next-btn" onclick="nextQuestion()" class="w-48">Next Question</button>
       </div>
@@ -76,7 +76,7 @@
     <p>You scored <span id="final-score"></span> out of <span id="total-questions"></span></p>
     <div class="restart-exit">
       <button onclick="restartQuiz()" id="restart-btn" class="w-25">Restart</button>
-      <button onclick="exitQuiz()" class="exit-button w-25">Exit</button>
+      <button onclick="exitQuiz()" id="exit-btn" class="exit-button w-25">Exit</button>
     </div>
   </div>
 </div>
